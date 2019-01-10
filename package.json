@@ -1,0 +1,104 @@
+{
+  "name": "Govt",
+  "version": "1.0.0",
+  "description": "Is The Government Open Today?",
+  "main": "gulpfile.js",
+  "author": "Caleb Zahnd, <https://twitter.com/calebzahnd>",
+  "copyright": "Caleb Zahnd",
+  "license": "UNLICENSED",
+  "private": true,
+  "devDependencies": {
+    "eslint": "^5.7.0",
+    "file-system": "^2.2.2",
+    "git-rev-sync": "^1.12.0",
+    "gulp": "^3.9.1",
+    "gulp-a11y": "^0.1.2",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csscomb": "^3.0.8",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-filesize": "0.0.6",
+    "gulp-header": "^2.0.5",
+    "gulp-htmlhint": "2.2.1",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-livereload": "^4.0.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-modernizr": "3.0.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-phplint": "^0.9.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-rimraf": "^0.2.2",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.1",
+    "gulp-util": "^3.0.8",
+    "gulp-wrapper": "^1.0.0",
+    "imagemin-pngquant": "^6.0.0",
+    "moment": "^2.22.2",
+    "postcss-reporter": "^6.0.0",
+    "postcss-scss": "^2.0.0",
+    "randomstring": "^1.1.5",
+    "run-sequence": "^2.2.1",
+    "stylelint": "^9.6.0",
+    "stylelint-config-standard": "^18.2.0"
+  },
+  "dependencies": {
+    "bowser": "^1.9.3",
+    "jquery": "^3.3.1",
+    "jquery-ui-dist": "^1.12.1",
+    "normalize.scss": "^0.1.0",
+    "rrssb": "^1.14.0"
+  },
+  "paths": {
+    "theme": "public/",
+    "css": {
+      "src": "src/scss/*.scss",
+      "dist": "assets/css/"
+    },
+    "fonts": {
+      "src": "src/media/fonts/**/*",
+      "dist": "assets/media/fonts"
+    },
+    "html": {
+      "src": "public/**/*.html",
+      "functions": "public/functions/"
+    },
+    "images": {
+      "src": "src/media/images/**/*",
+      "dist": "assets/media/images"
+    },
+    "js": {
+      "concatenate": [
+        "node_modules/bowser/bowser.js",
+        "node_modules/rrssb/js/rrssb.js",
+        "src/js/global-scripts.js",
+        "src/js/**/*.js"
+      ],
+      "copy": [
+        "node_modules/jquery/dist/jquery.min.js"
+      ],
+      "src": "src/js/",
+      "dist": "assets/js/",
+      "concat_filename": "global-ui.js"
+    },
+    "modernizr": {
+      "options": [
+        "setClasses",
+        "addTest",
+        "html5printshiv",
+        "testProp",
+        "fnBind"
+      ],
+      "tests": [
+        "ie8compat"
+      ],
+      "excludeTests": [
+        "hidden"
+      ]
+    },
+    "src": "src/"
+  }
+}

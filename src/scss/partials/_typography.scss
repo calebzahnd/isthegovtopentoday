@@ -1,0 +1,98 @@
+/*--------------*/
+/* Typography
+/*--------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro:400,900');
+
+
+$font-family-sans-serif:	'Source Sans Pro', sans-serif;
+$font-family-serif:			'Playfair Display', serif;
+
+@mixin font-body($color: inherit) {
+	font-family: $font-family-sans-serif;
+	@include fluid-type(map-get($grid-breakpoints, 'sm'), map-get($grid-breakpoints, 'xxl'), 15px, 17px);
+	font-weight: 400;
+	line-height: 1.9;
+	@if ($color != inherit) {
+		color: $color;
+	}
+	
+	a {
+		@include color(red);
+		text-decoration: none;
+
+		@include hover() {
+			@include color(red);
+		}
+	}
+}
+
+
+@mixin font-headline($color: color(white), $sm-font: 30px, $xxl-font: 44px) {
+	font-family: $font-family-serif;
+	@include fluid-type(map-get($grid-breakpoints, 'sm'), map-get($grid-breakpoints, 'xxl'), $sm-font, $xxl-font);
+	line-height: 1;
+	text-decoration: none;
+	@if ($color != inherit) {
+	color: $color;
+	}
+	font-weight: 100;
+}
+
+@mixin font-response( $sm-font: 120px, $xxl-font: 172px) {
+	font-family: $font-family-sans-serif;
+	@include fluid-type(map-get($grid-breakpoints, 'sm'), map-get($grid-breakpoints, 'xxl'), $sm-font, $xxl-font);
+	line-height: 1;
+	text-decoration: none;
+	font-weight: 900;
+}
+
+
+body {
+	@include font-body();
+}
+
+p,
+ul,
+ol {
+	@include font-body();
+	margin: 0 0 15px;
+	
+	&:empty {
+		display: none;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1.5;
+	margin: 0;
+	@include color(black);
+}
+
+hr {
+	border: transparent;
+	height: 1px;
+	@include color(gray, background);
+	margin-bottom: 20px;
+}
+
+a {
+	transition: all ease-in-out 300ms;
+
+	&::before,
+	&::after {
+		display: inline-block;
+	}
+	@include hover() {
+		transition: all ease-in-out 300ms;
+	}
+}
+
+sup {
+	font-size: 60%;
+}

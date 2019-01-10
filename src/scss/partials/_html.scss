@@ -1,0 +1,63 @@
+/*******/
+/* HTML
+/*******/
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+	box-sizing: border-box;
+	font-size:62.5%; //62.5% is recommended to we can easily use REM values and generate a px fallback.
+	@include color(charcoal, background-color);
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+	padding: gutters();
+	margin: 0;
+	overflow-x: hidden;
+	-ms-overflow-style: -ms-autohiding-scrollbar;
+
+
+	&:not(.user-is-tabbing) button:focus,
+	&:not(.user-is-tabbing) input:focus,
+	&:not(.user-is-tabbing) select:focus,
+	&:not(.user-is-tabbing) textarea:focus,
+	&:not(.user-is-tabbing) *:focus {
+		outline: none;
+	}
+}
+
+::selection {
+	@include color(ultralight, background-color);
+}
+
+.container {
+	@include container();
+	position: relative;
+}
+
+.hidden:not(html) {
+	display: none;
+}
+
+#content iframe {
+	max-width: 100%;
+}
+
+img,
+p img {
+	max-width: 100%;
+	height: auto;
+	font-size: 0;
+}
+
+figure {
+	margin: 0;
+}

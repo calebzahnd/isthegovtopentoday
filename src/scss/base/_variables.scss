@@ -1,0 +1,46 @@
+/*-----------*/
+/* Variables
+/*-----------*/
+
+//Global Grid variables
+$global-config:	(
+	block--width:	100%,
+	width:			1600px,
+	columns:		12,
+	gutters:		15px,
+);
+
+$grid-breakpoints: (
+	xs:  0,
+	sm:  544px,
+	md:  768px,
+	lg:  992px,
+	xl:  1200px,
+	xxl:  1440px,
+	xxxl: 1600px,
+);
+
+//Colors
+$colors: (
+	black: #000000,
+	white:#ffffff,
+	charcoal: #333132,
+	ultralight: #f4f4f4,
+	blue: #3b69fc,
+	red: #ee422b,
+	green: #2bee42,
+	gray: #a7a7a7,
+	transparent: transparent,
+);
+
+
+//Z-Index Management -- utilizes Sass Maps
+//Easiest way to use is via the mixin: @include z-index(zero);
+$z-index: (
+	hamburger					:	2000,
+	aboveground					:	100,
+	ground						:	1,
+	zero						:	0,
+	underground					:	-1,
+	hell						:	-9000
+);
