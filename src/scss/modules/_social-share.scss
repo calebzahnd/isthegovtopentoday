@@ -1,0 +1,62 @@
+/*--------------------------*/
+/* Social Sharing
+/*--------------------------*/
+
+
+.social-share {
+	position: fixed;
+    right: 0;
+    bottom: 100px;
+	list-style: none;
+	margin:0;
+	padding: 0;
+	@include z-index(social-share);
+
+	body[device=mobile] &,
+	body.home & {
+		display: none;
+	}
+	
+	& > li {
+		    transform: translateX(500%);
+			transition: all ease-in-out 1000ms;
+			transition-delay: 3500ms;
+
+			body.ready & {
+				transform: translateX(0%);
+			}
+
+		& > a {
+			display: block;
+			position: relative;
+			@include color(gray, background-color);
+			width: 45px;
+			height: 45px;
+
+			&::before {
+				@include centerer();
+				@include color(white);
+			}
+
+			@include hover() {
+				background-color: darken(color(gray), 10);
+			}
+		}
+	}
+}
+
+.share--facebook {
+	&::before {
+		@include iconfont($icon-facebook, 20px);
+	}
+}
+.share--twitter {
+	&::before {
+		@include iconfont($icon-twitter, 20px);
+	}
+}
+.share--email {
+	&::before {
+		//@include iconfont($icon-mail, 20px);
+	}
+}

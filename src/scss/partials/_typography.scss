@@ -4,9 +4,20 @@
 
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro:400,900');
 
+@font-face {
+    font-family: 'iconfont-myriad';
+    src:    url('/assets/media/fonts/iconfont-govt.eot');
+    src:    url('/assets/media/fonts/iconfont-govt.eot#iefix') format('embedded-opentype'),
+	        url('/assets/media/fonts/iconfont-govt.ttf') format('truetype'),
+	        url('/assets/media/fonts/iconfont-govt.woff') format('woff'),
+	        url('/assets/media/fonts/iconfont-govt.svg#iconfont-govt') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
 $font-family-sans-serif:	'Source Sans Pro', sans-serif;
 $font-family-serif:			'Playfair Display', serif;
+$font-iconfont:				'iconfont-govt';
 
 @mixin font-body($color: inherit) {
 	font-family: $font-family-sans-serif;

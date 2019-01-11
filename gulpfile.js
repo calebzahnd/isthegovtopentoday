@@ -206,7 +206,7 @@ gulp.task('cachebust', function(cb) {
 //---------------------------------------------------------------------------------------------
 
 gulp.task('build', function() {
-	$.runSequence('clean', ['modernizr', 'styles', 'scripts', 'fonts', 'images', 'validate', 'cachebust']);
+	$.runSequence('clean', ['modernizr', 'styles', 'scripts', 'fonts', 'images', 'validate']);
 });
 
 
