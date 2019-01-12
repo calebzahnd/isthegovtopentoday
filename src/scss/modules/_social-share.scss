@@ -55,8 +55,13 @@
 		@include iconfont($icon-twitter, 20px);
 	}
 }
+.share--linkedin {
+	&::before {
+		@include iconfont($icon-linkedin, 20px);
+	}
+}
 .share--email {
 	&::before {
-		//@include iconfont($icon-mail, 20px);
+		@include iconfont($icon-email, 20px);
 	}
 }

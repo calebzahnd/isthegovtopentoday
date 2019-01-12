@@ -20,7 +20,8 @@
 		$('body').append(
 		    '<ul class="social-share rrssb-buttons">'+
 		    '   <li><a href="https://www.facebook.com/sharer/sharer.php?u='+documentURL+'" class="share--facebook popup" aria-label="Share via Facebook"></a>'+
-		    '   <li><a href="https://twitter.com/intent/tweet?text='+documentTitle+encodeURIComponent(' | ')+documentURL+'" class="share--twitter popup" aria-label="Share via Twitter"></a>'+
+            '   <li><a href="https://twitter.com/intent/tweet?text='+documentTitle+encodeURIComponent(' | ')+documentURL+'" class="share--twitter popup" aria-label="Share via Twitter"></a>'+
+            '   <li><a href="https://www.linkedin.com/shareArticle?mini=true&url='+documentURL+'&title='+documentTitle+'" class="share--linkedin popup" aria-label="Share via Twitter"></a>'+
 		    '   <li><a href="mailto:?subject='+documentTitle+'&amp;body='+documentURL+'" class="share--email popup" aria-label="Share via Email"></a>'+
 		    '</ul>'
 		);
