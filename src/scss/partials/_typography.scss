@@ -21,7 +21,7 @@ $font-iconfont:				'iconfont-govt';
 
 @mixin font-body($color: inherit) {
 	font-family: $font-family-sans-serif;
-	@include fluid-type(map-get($grid-breakpoints, 'sm'), map-get($grid-breakpoints, 'xxl'), 15px, 17px);
+	@include fluid-type(map-get($grid-breakpoints, 'sm'), map-get($grid-breakpoints, 'xxl'), 13px, 15px);
 	font-weight: 400;
 	line-height: 1.9;
 	@if ($color != inherit) {
