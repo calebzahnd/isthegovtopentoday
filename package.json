@@ -37,7 +37,7 @@
     "gulp-util": "^3.0.8",
     "gulp-wrapper": "^1.0.0",
     "imagemin-pngquant": "^6.0.0",
-    "moment": "^2.22.2",
+    "moment": "^2.24.0",
     "postcss-reporter": "^6.0.0",
     "postcss-scss": "^2.0.0",
     "randomstring": "^1.1.5",
@@ -74,6 +74,7 @@
       "concatenate": [
         "node_modules/bowser/bowser.js",
         "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js",
+        "node_modules/moment/moment.js",
         "node_modules/rrssb/js/rrssb.js",
         "src/js/global-scripts.js",
         "src/js/**/*.js"

@@ -3,8 +3,27 @@
     window.main = {
 
         initialize: function () {
+            main.govtDate();
             main.socialShare();
             main.domReady();
+    },
+
+    //---------------------------------------------------------------------------------------------
+    // SOCIAL SHARE
+    //---------------------------------------------------------------------------------------------
+    govtDate: function() {
+        
+
+        function daysShutdown() {
+            var shutdownDate = moment("2018-12-22");
+            var todaysdate = moment();
+            return todaysdate.diff(shutdownDate, 'days');
+        }
+        //console.log(daysShutdown());
+
+        console.log(moment()); //This is a temporary test to see what timezone Amazon S3 reports (should be EST)
+        
+        
     },
 
     //---------------------------------------------------------------------------------------------
