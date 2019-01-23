@@ -13,16 +13,12 @@
     //---------------------------------------------------------------------------------------------
     govtDate: function() {
         
-
-        function daysShutdown() {
-            var shutdownDate = moment("2018-12-22");
-            var todaysdate = moment();
-            return todaysdate.diff(shutdownDate, 'days');
-        }
-        //console.log(daysShutdown());
-
-        console.log(moment()); //This is a temporary test to see what timezone Amazon S3 reports (should be EST)
+            var shutdownDate = moment("2018-12-22").add(1, 'hours'),
+                todaysdate = moment().add(1, 'hours'),
+                shutdownLength = (todaysdate.diff(shutdownDate, 'days') + 1);
         
+        $('#shutdown-today').text(todaysdate.format('MMMM Do YYYY'));
+        $('#shutdown-length').text(shutdownLength);
         
     },
 
