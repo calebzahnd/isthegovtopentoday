@@ -15,10 +15,15 @@
         
             var shutdownDate = moment("2018-12-22").add(1, 'hours'),
                 todaysdate = moment().add(1, 'hours'),
-                shutdownLength = (todaysdate.diff(shutdownDate, 'days') + 1);
+                shutdownLength = (todaysdate.diff(shutdownDate, 'days') + 1),
+                reopenDate = moment("2019-01-27").add(1, 'hours'),
+                //openedLength2 = moment.duration(moment("2019-01-25", "YYYY-MM-DD").diff(moment().format('MMMM Do YYYY'))).asDays(),
+                openedLength = (todaysdate.diff(reopenDate, 'days') + 1);
         
         $('#shutdown-today').text(todaysdate.format('MMMM Do YYYY'));
+        $('#reopened-date').text(moment("2019-01-25").add(1, 'hours').format('MMMM Do YYYY'));
         $('#shutdown-length').text(shutdownLength);
+        $('#opened-length').text(openedLength);
         
     },
 
