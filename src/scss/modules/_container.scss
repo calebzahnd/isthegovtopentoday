@@ -7,13 +7,20 @@
 	flex-direction: column;
 	align-items: center;
 
+	@include screen(sm, max) {
+		margin-top: 60px;
+	}
+
 	h1 {
 		@include font-headline();
 		text-align: center;
+		@include span(12);
 	}
 	h2 {
+		@include span(12);
 		@include font-response();
 		text-align: center;
+		margin-top: 30px;
 
 		&.response-yes {
 			@include color(green);
@@ -23,9 +30,28 @@
 		}
 	}
 
+	& > p {
+		@include font-body(color(ultralight));
+		margin-top: 5vh;
+		@include span(12);
+		text-align: center;
+		
+		@include screen(md) {
+			width: span(10);
+			@include push(1);
+		}
+		
+	}
+
 	.details {
 		@include font-body(color(ultralight));
-		margin-top: 20vh;
+		margin-top: 3vh;
 		text-align: center;
+		@include span(12);
+		
+		@include screen(md) {
+			width: span(10);
+			@include push(1);
+		}
 	}
 }

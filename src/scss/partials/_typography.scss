@@ -50,10 +50,10 @@ $font-iconfont:				'iconfont-govt';
 	font-weight: 100;
 }
 
-@mixin font-response( $sm-font: 120px, $xxl-font: 172px) {
+@mixin font-response( $sm-font: 60px, $xxl-font: 172px) {
 	font-family: $font-family-sans-serif;
 	@include fluid-type(map-get($grid-breakpoints, 'sm'), map-get($grid-breakpoints, 'xxl'), $sm-font, $xxl-font);
-	line-height: 1;
+	line-height: 0.9;
 	text-decoration: none;
 	font-weight: 900;
 }
